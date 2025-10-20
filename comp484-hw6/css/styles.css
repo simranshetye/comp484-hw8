@@ -1,0 +1,191 @@
+/* === Box Model Fix === */
+* {
+  box-sizing: border-box;
+}
+
+/* === CSS Variables (Optional: Customize your palette) === */
+:root {
+  --accent-color: #2e7d32;         /* Deep green */
+  --highlight-color: #66bb6a;      /* Light green */
+  --text-color: #333333;           /* Dark gray for readability */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === Global Styles === */
+body {
+  background-color: #ffffff;
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  padding: 0 1rem;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* === Content Wrapper === */
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+
+/* === Columns === */
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+  padding-top: 10px;
+}
+
+/* === Profile Image === */
+.profile-img {
+  border-radius: 50%;
+  width: 300px;
+  margin-right: 30px;
+  display: block;
+}
+
+/* === Header Text === */
+header h1,
+header h2 {
+  margin: 0;
+}
+
+/* === Navigation Tabs === */
+.nav-tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0;
+}
+
+.nav-tabs li a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-tabs li a:hover {
+  background-color: var(--highlight-color);
+  color: #ffffff;
+}
+
+/* === Section Styling === */
+section {
+  background-color: #ffffff;
+}
+
+/* === Footer === */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: var(--highlight-color);
+}
+
+/* === Project Entries === */
+article {
+  background-color: #ffffff;
+  border: 2px solid var(--highlight-color);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000000;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+article h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  font-size: 1rem;
+  color: #000000;
+  margin: 0.5rem 0;
+}
+
+article a {
+  color: var(--highlight-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+article a:hover {
+  color: var(--accent-color);
+}
+
+/* === Fade-in Animation === */
+.fade-in {
+  opacity: 1;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sticky-nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 000;
+    transition: color 0.3s ease;
+}
+
+.sticky-nac a:hover {
+    color: var(--highlight-color);
+}
+.bg-projects {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/projects-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
